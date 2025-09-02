@@ -1,0 +1,93 @@
+/* Estilos CSS específicos para esta página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f2f5;
+    color: #333;
+}
+
+/* Logos posicionados */
+.logo-semed {
+    position: fixed;
+    top: 345px;
+    right: 38px;
+    width: 195px;
+    height: auto;
+    z-index: 100;
+}
+
+.logo-robo {
+    position: fixed;
+    top: 405px;
+    right: 658px;
+    width: 90px;
+    height: auto;
+    z-index: 100;
+}
+
+.logo-eduDigital {
+    position: fixed;
+    top: 60px;
+    right: 450px;
+    width: 230px;
+    height: auto;
+    z-index: 100;
+}
+
+.titulo-iframe {
+    font-size: 24px;
+    color: #1a73e8;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 10px;
+}
+
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.feature-highlight {
+    display: flex;
+    align-items: center;
+    background-color: #e8f0fe;
+    border-left: 4px solid #1a73e8;
+    padding: 10px 15px;
+    margin-top: 20px;
+}
+
+.icons {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.botao-mais {
+    margin-top: 20px;
+}
+
+.botao-azul {
+    display: inline-block;
+    padding: 10px 15px;
+    background-color: #4285f4;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.botao-azul:hover {
+    background-color: #3367d6;
+}
+
+
+
+/* Rodapé */
+.footer-content {
+    position: absolute;
+    top: 532px;
+    right: 353px;
+    text-align: center;
+    font-size: 14px;
+    width: 35%;
+    display: flex;
+}

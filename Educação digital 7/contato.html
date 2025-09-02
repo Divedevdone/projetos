@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educação Digital - São José dos Pinhais</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="nav-container">
+            <div class="logo">CONTATO</div>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Início</a></li>
+                    <li><a href="nucleo.html">Núcleo</a></li>
+                    <li><a href="recursos.html">Recursos</a></li>
+                    <li><a href="contato.html">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero" id="inicio">
+        <div class="hero-content">
+            <div class="main-logo">
+                <span class="animated-icon">🎓</span>
+            </div>
+            <h1>Educação digital</h1>
+            <p class="hero-subtitle">Um novo olhar na forma de aprender</p>
+
+            <main class="main-content full-text">
+                <h3>Contato</h3>
+                <p>
+                    Para entrar em contacto com a SEMED (Secretaria Municipal de Educação 156) de São José dos Pinhais,
+                    pode
+                    ligar para o telefone geral da Prefeitura (41) 3381-6800 ou através do site oficial:
+                    <br>
+                </p>
+                <a href="https://prefeitura.sjp.pr.gov.br/portal" target="_blank" class="pretty-link">
+                    Prefeitura de São José dos Pinhais
+                </a>
+            </main>
+
+        </div>
+    </section>
+
+    <!-- Robozinho mascote -->
+    <div class="robot-mascot" onclick="showMascotMessage()" title="Clique para receber dicas de navegação">
+        🤖
+    </div>
+
+    <!-- Modal -->
+    <div id="mascotModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <h2>👋 Olá, eu sou o RoboEdu!</h2>
+            <p>Sou seu assistente virtual! Clique nas abas coloridas acima para explorar todos os recursos educacionais
+                disponíveis.</p>
+            <p><strong>💡 Dica:</strong> Use os cards interativos para navegar facilmente entre as seções!</p>
+            <div style="text-align: center; margin-top: 1rem;">
+                <button onclick="closeModal()"
+                    style="background: #42519C; color: white; border: none; padding: 10px 20px; border-radius: 25px; cursor: pointer;">Entendi!</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+<footer class="footer">
+    <span>@L3 - 2025 Prefeitura de São José dos Pinhais</span>
+    <img src="semed.png" class="footer-logo-right">
+    <img src="roboEdu.png" class="footer-logo-left">
+</footer>
+
+</html>
