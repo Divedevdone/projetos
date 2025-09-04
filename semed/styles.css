@@ -1,0 +1,389 @@
+/* Reset e configurações globais */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* Logos posicionados */
+.logo-semed {
+    position: fixed;
+    top: 390px;
+    right: 200px;
+    width: 195px;
+    height: auto;
+    z-index: 100;
+}
+
+.logo-robo {
+    position: fixed;
+    top: 450px;
+    right: 820px;
+    width: 90px;
+    height: auto;
+    z-index: 100;
+}
+
+.logo-eduDigital {
+    position: fixed;
+    top: 60px;
+    right: 450px;
+    width: 230px;
+    height: auto;
+    z-index: 100;
+}
+
+/* Header */
+.header {
+    background: rgba(1, 49, 74, 0.95);
+    padding: 3px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 50;
+    backdrop-filter: blur(10px);
+    color: antiquewhite;
+}
+
+.nav-menu {
+    padding: 1px;
+    position: relative;
+}
+
+.nav-menu li a {
+    color: antiquewhite;
+    text-decoration: none;
+    font-size: 13px;
+}
+
+.nav-container {
+    max-width: 1400px;
+    margin: -15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 3rem;
+    color: antiquewhite;
+}
+
+/* Container das abas */
+.sidebar {
+    height: 100vh;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 5;
+}
+
+.tab {
+    z-index: 1;
+    writing-mode: vertical-lr;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+    padding: 10px;
+    transition: all 0.3s ease;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    position: absolute;
+    height: 100vh;
+}
+
+.text-tab {
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+}
+
+
+.tab:hover {
+    opacity: 0.6;
+    background-color: #eee;
+    cursor: pointer;
+}
+
+
+/* Cores das abas */
+.tab:nth-child(1) {
+    background: #004AAD;
+    left: 0;
+}
+
+.tab:nth-child(2) {
+    background: #C8A600;
+    left: 40px;
+}
+
+.tab:nth-child(3) {
+    background: #2E7D32;
+    left: 80px;
+}
+
+.tab:nth-child(4) {
+    background: #0097A7;
+    left: 120px;
+}
+
+.tab:nth-child(5) {
+    background: #D4AF37;
+    left: 160px;
+}
+
+.tab:nth-child(6) {
+    background: rgb(237, 86, 4);
+    left: 200px;
+}
+
+.tab:nth-child(7) {
+    background: #64229e;
+    left: 240px;
+}
+
+/* Estados das abas */
+.tab-hidden {
+    transform: translateX(2000%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+.tab-active {
+    transform: translateX(0);
+    opacity: 1;
+    left: 0 !important;
+    z-index: 10;
+    transition: all 0.2s ease;
+}
+
+/* Conteúdo principal */
+.content {
+    position: relative;
+    z-index: 10;
+    flex: 1;
+    padding: 30px;
+    left: -30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-left: 300px;
+    transition: all 0.3s ease;
+}
+
+#content2,
+#content3,
+#content4,
+#content5,
+#content6,
+#content7 {
+    position: absolute;
+    top: 15px;
+    left: 420px;
+    transform: translateX(-50%);
+    width: 80%;
+    text-align: center;
+    padding: 30px;
+    transition: all 0.3s ease;
+}
+
+
+.hidden {
+    display: none;
+}
+
+h1 {
+    color: #004D40;
+    margin: 0;
+}
+
+.subtitle {
+    font-size: 18px;
+    color: #00796B;
+    margin-top: 10px;
+}
+
+/* Conteúdo interativo */
+.feature-highlight {
+    background: rgba(120, 118, 58, 0.1);
+    border-left: 4px solid #E1DC53;
+    padding: 1rem;
+    margin: 1rem 0;
+    border-radius: 0 10px 10px 0;
+}
+
+
+/* Robô mascote */
+.robot-mascot {
+    position: fixed;
+    bottom: 100px;
+    right: 30px;
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #E1DC53, #DA0B16);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    font-size: 2.5rem;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    animation: bounce 2s infinite;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes bounce {
+
+    0%,
+    20%,
+    50%,
+    80%,
+    100% {
+        transform: translateY(0);
+    }
+
+    40% {
+        transform: translateY(-10px);
+    }
+
+    60% {
+        transform: translateY(-5px);
+    }
+}
+
+.robot-mascot:hover {
+    animation: none;
+    transform: scale(1.1);
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Botão de fechar modal */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+}
+
+.icons {
+    font-size: 3rem;
+    /* aumenta o tamanho do emoji */
+    margin-right: 8px;
+    /* espaço entre o ícone e o texto */
+
+}
+
+/* fala do robo*/
+.gif-popup {
+    position: absolute;
+    display: none;
+    z-index: 3000;
+    background: #fff;
+    color: #333;
+    font-size: 14px;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    max-width: 200px;
+    text-align: center;
+}
+
+.btn-add {
+    position: fixed;
+    bottom: 190px;
+    right: 80px;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(135deg, #acb3d3, #fefeff);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 1.5rem;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.btn-add:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #2f3a75, #1a2347);
+}
+
+
+/* Botão de toggle RoboEdu */
+.robo-toggle {
+    position: fixed;
+    bottom: 190px;
+    right: 30px;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(135deg, #42519C, #2f3a75);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 1000;
+    font-size: 1.5rem;
+    box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease;
+}
+
+.robo-toggle:hover {
+    transform: scale(1.1);
+    background: linear-gradient(135deg, #2f3a75, #1a2347);
+}
+
+/* Estado desabilitado do robô */
+.robot-mascot.disabled {
+    opacity: 0.3;
+    animation: none;
+    background: linear-gradient(135deg, #666, #333);
+}
+
+
+
+
+/* Rodapé */
+.footer-content {
+    position: absolute;
+    top: 580px;
+    right: 392px;
+    text-align: center;
+    font-size: 14px;
+    width: 35%;
+    display: flex;
+}
